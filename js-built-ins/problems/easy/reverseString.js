@@ -20,6 +20,11 @@
 
 function reverseString(str) {
   // Your code here
+  result = "";
+  for (let letter of str ){
+    result = letter + result;
+  }
+  return result;
 }
 
 module.exports = reverseString;

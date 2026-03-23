@@ -21,6 +21,12 @@
 
 function countOccurrences(arr) {
   // Your code here
+  let result = arr.reduce((acc, curr) => {
+    acc[curr] = (acc[curr] || 0) + 1;
+    return acc;
+  } , {})
+
+  return result;
 }
 
 module.exports = countOccurrences;
