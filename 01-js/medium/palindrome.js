@@ -7,7 +7,23 @@
 */
 
 function isPalindrome(str) {
-    return true;
+  newStr = "";
+  for (let char of str){
+    if(/[a-z0-9]/i.test(char)){
+      newStr += char.toLowerCase();
+    }
+  }
+  left = 0;
+  right = newStr.length - 1;
+
+  while(left < right){
+    if (newStr[left] !== newStr[right]){
+      return false;
+    }
+    left++;
+    right--;
+  }
+  return true;
 }
 
 module.exports = isPalindrome;
