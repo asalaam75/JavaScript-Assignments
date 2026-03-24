@@ -23,6 +23,18 @@
 
 function reverseInteger(num) {
   // Your code here
+  number = 0;
+  
+  if (num <  0) multiple = -1;
+  else multiple = 1;
+  num = Math.abs(num)
+
+  while (num !== 0){
+    last_dig = num % 10;
+    number = (number * 10) + last_dig;
+    num = Math.trunc(num / 10) | 0;
+  }
+  return number * multiple;
 }
 
 module.exports = reverseInteger;

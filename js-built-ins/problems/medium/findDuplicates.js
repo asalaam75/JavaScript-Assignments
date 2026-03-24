@@ -20,7 +20,7 @@
 
 
 function findDuplicates(arr) {
-  return arr.filter((ele, index) => arr.indexOf(ele) !== index);
+  return arr.filter((element, index) => arr.indexOf(element) !== index)
 }
 
 module.exports = findDuplicates;

@@ -22,5 +22,15 @@
 */
 function nonrepeat(str) {
   // Your code here
+  let r  =  {}
+  for(let l of str){
+    r[l] = (r[l] || 0) + 1
+  }
+ 
+  
+  for(let l of str){
+    if (r[l] ===  1) return l
+  }
+  return null;
 }
 module.exports = nonrepeat;
